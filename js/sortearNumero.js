@@ -1,8 +1,6 @@
 const resposta_minima = 0
 const resposta_maxima = 1000
-const resposta_valor = valorAleatorio()
-
-const campo_resposta_usuario = document.querySelector("[data-resposta]")
+const resposta_secreta = sortearNumero(resposta_minima, resposta_maxima)
 
 atualizaCamposValores()
 
@@ -11,6 +9,6 @@ function atualizaCamposValores() {
     document.querySelector("[data-valor-maior]").innerHTML = resposta_maxima
 }
 
-function valorAleatorio() {
-    return Math.floor(Math.random() * (resposta_maxima - resposta_minima)) + resposta_minima;
+function sortearNumero(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }

@@ -25,9 +25,8 @@ body {
 
 .principal__area {
     background-color: var(--color-secondary);
-    padding: 15vh 5vw;
     border-radius: 1rem;
-    opacity: 0.5;
+    padding: 10vh 5vw;
     text-align: center;
 }
 
@@ -50,10 +49,9 @@ body {
 
 .principal__area__mensagem__resposta {
     font-size: 2em;
-    border: 2px solid var(--color-primary);
+    color: var(--color-tertiary);
+    border: 2px solid var(--color-tertiary);
     display: inline-block;
     margin: 20px;
     padding: 10px;
 }
-
-
