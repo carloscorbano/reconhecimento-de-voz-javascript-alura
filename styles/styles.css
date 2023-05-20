@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --font-family: 'Roboto', sans-serif; 
+    --font-weight-text: 300;
+    --font-weight-title: 400;
+
+    --bg-color: #A9907E;
+    --color-primary: #F3DEBA;
+    --color-secondary: #675D50;
+    --color-tertiary: #ABC4AA;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--color-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-text);
+}
+
+.principal__area {
+    background-color: var(--color-secondary);
+    padding: 15vh 5vw;
+    border-radius: 1rem;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.principal__area__titulo {
+    color: var(--color-primary);
+    font-size: 4em;
+    font-weight: var(--font-weight-title);
+    z-index: 1;
+}
+
+.principal__area__texto {
+    font-size: 2em;
+    padding-top: 1em;
+}
+
+.principal__area__mensagem {
+    font-size: 1.5em;
+    padding-top: 1em;
+}
+
+.principal__area__mensagem__resposta {
+    font-size: 2em;
+    border: 2px solid var(--color-primary);
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+}
+
+

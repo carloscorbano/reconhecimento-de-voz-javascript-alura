@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconhecimento de voz</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" media="screen" />
+
+    <title>Número secreto</title>
 </head>
 <body>
+
+    <section class="principal__area">
+        <h1 class="principal__area__titulo">Acerte o número secreto</h1>
+        <h3 class="principal__area__texto">O número secreto está entre <span data-valor-menor>0</span> e <span data-valor-maior>100</span></h3>
+        <div id="chute" class="principal__area__mensagem">
+            <div>Você disse:</div>
+            <span class="principal__area__mensagem__resposta" data-resposta>20</span>
+            <div>O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i></div>
+        </div>
+    </section>
     
+    <script src="./js/main.js"></script>
 </body>
 </html>
