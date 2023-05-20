@@ -1,1 +1,3 @@
-# CURSO DE JAVASCRIPT ALURA - RECONHECIMENTO DE VOZ #
+# Curso de Javascript - Alura #
+
+Reconhecimento de voz utilizando a linguagem javascript
