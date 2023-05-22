@@ -1,12 +1,26 @@
-function verificaChute(chute) {
-    const numero = +chute
+function validaStringParaNumero(str) {
+    resultado = +str
 
-    if(chuteForInvalido(numero)) {
-        console.log('Valor invalido')
+    if(chuteForInvalido(resultado)) {
+        return -1
     }
 
-    if(numeroForMaiorOuMenorQueValorPermitido(numero)) {
-        console.log(`valor invalido: o numero secreto precisa estar entre ${resposta_minima} e ${resposta_maxima}`)
+    if(numeroForMaiorOuMenorQueValorPermitido(resultado)) {
+        // console.log(`valor invalido: o numero secreto precisa estar entre ${resposta_minima} e ${resposta_maxima}`)
+        return -2
+    }
+
+    return resultado
+}
+
+function validaResposta(resposta) {
+
+    if(resposta < resposta_secreta) {
+        return -1
+    } else if(resposta > resposta_secreta) {
+        return 1
+    } else {
+        return 0
     }
 }
 
