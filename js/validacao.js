@@ -13,6 +13,10 @@ function validaStringParaNumero(str) {
     return resultado
 }
 
+function checaGameOver(str) {
+    return str.toUpperCase().includes("GAME OVER")
+}
+
 function validaResposta(resposta) {
 
     if(resposta < resposta_secreta) {

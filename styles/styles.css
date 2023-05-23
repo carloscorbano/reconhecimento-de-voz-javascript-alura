@@ -11,6 +11,13 @@
     --bg-color: linear-gradient(180deg, var(--color-secondary), 80%, var(--color-primary));
 }
 
+.game-over {
+    --color-primary: #200F21;
+    --color-secondary: #382039;
+    --color-tertiary: #200F21;
+    --bg-color: linear-gradient(180deg, var(--color-secondary), 80%, var(--color-primary));
+}
+
 body {
     background: var(--bg-color);
     color: var(--color-primary);
@@ -76,6 +83,14 @@ h2 {
     color: var(--color-primary)
 }
 
+h2::after {
+    content: '';
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    border: 0.5px solid rgba(150, 150, 150, 0.1);
+}
+
 h3 {
     margin-top: 50px;
     font-size: 2em;
@@ -95,4 +110,11 @@ h3 {
     box-shadow: 1px 1px 5px var(--color-secondary);
     border-radius: 1em;
     z-index: 1;
+}
+
+.info {
+    margin-top: 2%;
+    text-shadow: 1px 1px 1px var(--color-tertiary);
+    font-size: 1em;
+    font-weight: var(--font-weight-text);
 }

@@ -11,11 +11,35 @@ recognition.onresult = (event) => { onSpeak(event) }
 recognition.onend = () => { recognition.start() }
 
 const elemento_chute = document.querySelector("#chute")
+const area_principal = document.querySelector(".principal__area")
 
 function onSpeak(e) {
     transcript = e.results[0][0].transcript
-    chute = validaStringParaNumero(transcript)
-    atualizaHTML(chute, transcript)
+    processaTranscript(transcript)
+}
+
+function processaTranscript(transcript) {
+    if(checaGameOver(transcript)) {
+        mostraTelaGameOver()
+    }else {
+        chute = validaStringParaNumero(transcript)
+        atualizaHTML(chute, transcript)
+    }
+}
+
+function mostraTelaGameOver() {
+    document.body.classList.toggle("game-over")
+    
+    area_principal.innerHTML = `
+        <h2>GAME OVER</h2>
+        <h3>O número secreto era ${resposta_secreta}</h3>
+        <button id="jogar-novamente" class="btn-jogar">Jogar Novamente!</button>
+    `
+
+    removeInfo()
+    document.querySelector("#jogar-novamente").addEventListener("click", () => {
+        window.location.reload()
+    })
 }
 
 function atualizaHTML(valor, original){
@@ -48,11 +72,13 @@ function atualizaHTML(valor, original){
                     `
                     break;
                 case 0: //valor igual a resposta secreta
-                    document.querySelector(".principal__area").innerHTML = `
+                    area_principal.innerHTML = `
                             <h2>Parabéns! Você acertou!</h2>
                             <h3>O número secreto era ${valor}</h3>
                             <button id="jogar-novamente" class="btn-jogar">Jogar Novamente!</button>
                         `
+
+                    removeInfo()
                     document.querySelector("#jogar-novamente").addEventListener("click", () => {
                         window.location.reload()
                     })
@@ -67,4 +93,8 @@ function atualizaHTML(valor, original){
             }
             break;
     }
+}
+
+function removeInfo() {
+    document.querySelector(".info").innerHTML = ""
 }
