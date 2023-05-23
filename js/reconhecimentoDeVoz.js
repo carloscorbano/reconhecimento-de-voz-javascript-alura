@@ -48,10 +48,14 @@ function atualizaHTML(valor, original){
                     `
                     break;
                 case 0: //valor igual a resposta secreta
-                document.querySelector(".principal__area").innerHTML = `
-                        <h2>Parabéns! Você acertou!</h2>
-                        <h3>O número secreto era ${valor}</h3>
-                    `
+                    document.querySelector(".principal__area").innerHTML = `
+                            <h2>Parabéns! Você acertou!</h2>
+                            <h3>O número secreto era ${valor}</h3>
+                            <button id="jogar-novamente" class="btn-jogar">Jogar Novamente!</button>
+                        `
+                    document.querySelector("#jogar-novamente").addEventListener("click", () => {
+                        window.location.reload()
+                    })
                     break;
                 case 1: //valor maior que a resposta secreta
                 elemento_chute.innerHTML = `
